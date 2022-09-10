@@ -1,6 +1,41 @@
+import { useEffect, useState } from 'react';
+import api from '../../utils/api';
 import './home.css'
 
+interface props{
+    url:string,
+    name:string,
+    image?:string
+}
+
+const TutorialItem = ({url, name, image}:props) =>{
+    return (
+        <a href={url}>
+            <div className="item" style={{ backgroundImage:`url(${image})` }}>
+                <div>
+                    <i className="fa fa-glass"></i>
+                </div>
+                <h1>{name}</h1>
+            </div>
+        </a>
+    )
+}
+
 export default function Home() {
+    const [tutorials, setTutorials] = useState([]);
+
+
+    const getData = async () =>{
+        const response = await api.get('/tutorial/get-list');
+
+        setTutorials(response.data.result.rows);
+        console.log(response.data.result.rows);
+    }
+
+    useEffect(() =>{
+        getData();
+    }, []);
+
     return (
         <div className="home-container">
             <div className="content">
@@ -11,59 +46,25 @@ export default function Home() {
                     <div className="container">
                         <p>Decentralized Exchanges</p>
                         <div className="carousel">
-                            <a href="https://jup.ag/"><div id="jupiter" className="item">
-                                <div>
-                                    <i className="fa fa-glass"></i>
-                                </div>
-                                <h1>Jupiter</h1>
-                            </div></a>
-                            <a href="https://www.orca.so/"><div id="orca" className="item">
-                                <div>
-                                    <i className="fa fa-glass"></i>
-                                </div>
-                                <h1>Orca</h1>
-                            </div></a>
-                            <a href="https://raydium.io/"><div id="raydium" className="item">
-                                <div>
-                                    <i className="fa fa-glass"></i>
-                                </div>
-                                <h1>Raydium</h1>
-                            </div></a>
-                            <a href="https://portal.projectserum.com/"><div id="serum" className="item">
-                                <div>
-                                    <i className="fa fa-glass"></i>
-                                </div>
-                                <h1>Serum</h1>
-                            </div></a>
-
+                            {
+                                tutorials?.map((item:any, index) =>{
+                                    if(item.category === 'Decentralized Exchanges'){
+                                        return <TutorialItem url={item.url} name={item.name} image={item.image} key={index} />
+                                    }
+                                })
+                            }
                         </div>
                         <div className="container">
                             <p>NFT Marketplaces</p>
                             <div className="carousel">
-                                <a href="https://magiceden.io/"><div id="magicEden" className="item">
-                                    <div>
-                                        <i className="fa fa-glass"></i>
-                                    </div>
-                                    <h1>Magic Eden</h1>
-                                </div></a>
-                                <a href="https://solanart.io/"><div id="solanart" className="item">
-                                    <div>
-                                        <i className="fa fa-glass"></i>
-                                    </div>
-                                    <h1>Solanart</h1>
-                                </div></a>
-                                <a href="https://www.metaplex.com/"><div id="metaplex" className="item">
-                                    <div>
-                                        <i className="fa fa-glass"></i>
-                                    </div>
-                                    <h1>METAPLEX</h1>
-                                </div></a>
-                                <a href="https://solsea.io/"><div id="solsea" className="item">
-                                    <div>
-                                        <i className="fa fa-glass"></i>
-                                    </div>
-                                    <h1>Solsea</h1>
-                                </div></a>
+                            {
+                                tutorials?.map((item:any, index) =>{
+                                    if(item.category === 'NFT Marketplaces'){
+                                        return <TutorialItem url={item.url} name={item.name} image={item.image} key={index} />
+                                    }
+                                })
+                            }
+                            
                             </div>
                         </div>
                     </div>

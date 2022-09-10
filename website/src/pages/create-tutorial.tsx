@@ -5,6 +5,7 @@ import api from "../utils/api";
 const CreateTutorial = () =>{
     const [url, setUrl] = useState('');
     const [name, setName] = useState('');
+    const [category, setCategory] = useState('');
     const [image, setImage] = useState('');
     const [description, setDescription] = useState('');
     const [tutorialSteps, setTutorialSteps] = useState('');
@@ -18,6 +19,7 @@ const CreateTutorial = () =>{
         const response = await api.post('/tutorial/create', {
             url,
             name,
+            category,
             image,
             description,
             tutorialSteps,
@@ -30,6 +32,7 @@ const CreateTutorial = () =>{
 
         setUrl('')
         setName('')
+        setCategory('')
         setImage('')
         setDescription('')
         setTutorialSteps('')
@@ -48,6 +51,10 @@ const CreateTutorial = () =>{
                 <div>
                     <p>Project Name</p>
                     <input required type='text' value={name} onChange={e => setName(e.target.value)} />
+                </div>
+                <div>
+                    <p>Category</p>
+                    <input required type='text' value={category} onChange={e => setCategory(e.target.value)} />
                 </div>
                 <div>
                     <p>Image</p>
