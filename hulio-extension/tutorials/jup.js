@@ -117,9 +117,9 @@ const checkStep = () => {
             '<h1 id = "site-title">Jupiter</h1>\n' +
             '<p id = "paragraph123456">Jupiter searches all <a class = "vocab" href="https://coinmarketcap.com/alexandria/glossary/exchange" target="_blank">exchanges</a> on <a class = "vocab" href="https://www.youtube.com/watch?v=1jzROE6EhxM" target="_blank">Solana</a> to find you the best prices for <a class = "vocab" href="https://coinmarketcap.com/alexandria/glossary/token-swap" target="_blank">swapping</a> crypto.</p>\n' +
             '<button id="button-1">Continue</button>\n' +
-            '</div>'
+            '</div>';
         document.body.prepend(popup);
-        document.getElementById("button-1").onclick = increment
+        document.getElementById("button-1").onclick = increment;
     }
 
     //step 2
@@ -171,7 +171,7 @@ const checkStep = () => {
         }
     }
 
-    //Step 3
+    //Step 4
     //Back to the main program flow
     else if (step === 3) {
         popup.innerHTML =
@@ -183,7 +183,7 @@ const checkStep = () => {
         document.getElementById("button-1").onclick = increment
     }
 
-    //Step 4
+    //Step 5
     //Give user enough Solana to interact with jup.ag
     //Function needs to be fixed on the backend
     else if (step === 4) {
@@ -210,7 +210,7 @@ const checkStep = () => {
         initBalanace = checkBalance(initBalanceContent)
     }
 
-    //Step 5
+    //Step 6
     //Countdown
     //Ideally, this should only advance when we detect a balance change, either on page, or using web3js
     else if (step === 5) {
@@ -228,6 +228,7 @@ const checkStep = () => {
         document.getElementById("button-1").onclick = increment
     }
 
+    //Step 7
     else if (step === 6) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-2">\n' +
@@ -244,6 +245,7 @@ const checkStep = () => {
         walletButton2.style.borderRadius = "10px";
     }
 
+    //Step 8
     else if (step === 7) {
         //Select element
         var elem = document.querySelector("#__next > div.flex.flex-col.min-h-screen.justify-between > div > div.flex.flex-col.justify-between > div > div.w-full.max-w-md > div.w-full.max-w-md.pb-6.md\\:pb-12.lg\\:pb-24 > form > div.w-full.rounded-xl.bg-white-75.dark\\:bg-white.dark\\:bg-opacity-5.shadow-lg.flex.flex-col.p-4.lg\\:px-6.lg\\:py-8 > div.border-b.border-transparent > div > div > div > div > button > div.ml-4.mr-2.font-semibold")
@@ -260,6 +262,7 @@ const checkStep = () => {
         }
     }
 
+    //Step 9
     else if (step === 8) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-2">\n' +
@@ -276,6 +279,7 @@ const checkStep = () => {
         document.getElementById("button-1").onclick = increment
     }
 
+    //Step 10
     else if (step === 9) {
         var elem = document.querySelector("#__next > div.flex.flex-col.min-h-screen.justify-between > div > div.flex.flex-col.justify-between > div > div.w-full.max-w-md > div.w-full.max-w-md.pb-6.md\\:pb-12.lg\\:pb-24 > form > div.w-full.rounded-xl.bg-white-75.dark\\:bg-white.dark\\:bg-opacity-5.shadow-lg.flex.flex-col.p-4.lg\\:px-6.lg\\:py-8 > div.px-3 > div > div > div > button > div.ml-4.mr-2.font-semibold")
         var crypto = "USDT"
@@ -289,6 +293,7 @@ const checkStep = () => {
         }
     }
 
+    //Step 11
     else if (step === 10) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-2">\n' +
@@ -305,6 +310,7 @@ const checkStep = () => {
         document.getElementById("button-1").onclick = increment
     }
 
+    //Step 12
     else if (step == 11) {
         document.getElementById("button-1").onclick = null
         var payElem = document.querySelector("#__next > div.flex.flex-col.min-h-screen.justify-between > div > div.flex.flex-col.justify-between > div > div.w-full.max-w-md > div.w-full.max-w-md.pb-6.md\\:pb-12.lg\\:pb-24 > form > div.w-full.rounded-xl.bg-white-75.dark\\:bg-white.dark\\:bg-opacity-5.shadow-lg.flex.flex-col.p-4.lg\\:px-6.lg\\:py-8 > div.border-b.border-transparent > div > div > div > div > button > div.ml-4.mr-2.font-semibold")
@@ -329,6 +335,7 @@ const checkStep = () => {
         }
     }
 
+    //Step 13
     else if (step === 12) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-2">\n' +
@@ -352,10 +359,12 @@ const checkStep = () => {
         }
     }
 
+    //Step 14
     else if (step === 13) {
         increment()
     }
 
+    //Step 15
     else if (step === 14) {
         popup.innerHTML = 
             '<div class="popup-tutorial-template popup-1">\n' +
@@ -375,6 +384,7 @@ const checkStep = () => {
         
     }
 
+    //Step 16
     else if (step === 15) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-1">\n' +
@@ -385,6 +395,7 @@ const checkStep = () => {
         document.getElementById("button-1").onclick = increment
     }
 
+    //Step 17
     else if (step === 16) {
         popup.innerHTML =
             '<div class="popup-tutorial-template popup-1">\n' +
@@ -434,4 +445,12 @@ setTimeout(function () {
         }
     }
 }, 1500);
+
+const exampleSteps = {
+    "html_steps":[
+        "<div class=\"popup-tutorial-template popup-1\" id=\"48093343-34243242\">\n <h1 id = \"site-title\">Jupiter</h1>\n <p id = \"paragraph123456\">Jupiter searches all <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/exchange\" target=\"_blank\">exchanges</a> on <a class = \"vocab\" href=\"https://www.youtube.com/watch?v=1jzROE6EhxM\" target=\"_blank\">Solana</a> to find you the best prices for <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/token-swap\" target=\"_blank\">swapping</a> crypto.</p>\n <button id=\"button-1\">Continue</button>\n </div>"
+        ,
+        "<div class=\"popup-tutorial-template popup-1\" id=\"48093343-34243242\">\n <h1 id = \"site-title\">Jupiter</h1>\n <p id = \"paragraph123456\">Jupiter searches all <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/exchange\" target=\"_blank\">exchanges</a> on <a class = \"vocab\" href=\"https://www.youtube.com/watch?v=1jzROE6EhxM\" target=\"_blank\">Solana</a> to find you the best prices for <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/token-swap\" target=\"_blank\">swapping</a> crypto.</p>\n <button id=\"button-1\">Continue1</button>\n </div>"
+    ]
+}
 

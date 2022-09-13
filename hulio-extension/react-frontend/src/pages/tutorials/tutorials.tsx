@@ -49,7 +49,7 @@ export default function Tutorials() {
                         <div className="carousel">
                             {
                                 tutorials?.map((item:any, index) =>{
-                                    if(item.category === 'Decentralized Exchanges'){
+                                    if(item.category === 'Decentralized Exchange'){
                                         return <TutorialItem url={item.url} name={item.name} image={item.image} key={index} />
                                     }
                                 })

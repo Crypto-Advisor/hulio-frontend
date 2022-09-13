@@ -317,7 +317,6 @@ a {
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
     background: url("./icons/background.jpg");
     font-size: 20px;
 }
@@ -341,7 +340,9 @@ a {
 .create-tutorial-container textarea{
     font-size: 20px;
     width: 500px;
+    height: 20vh;
     color: black;
+    background: white;
 }
 
 .create-tutorial-container button{
