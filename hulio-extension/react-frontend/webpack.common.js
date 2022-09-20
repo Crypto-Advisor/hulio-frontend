@@ -6,7 +6,12 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = {
     entry: {
-        index: path.resolve('src/index.tsx'),
+      home: path.resolve('src/pages/home/home.tsx'),
+      advancedSettings: path.resolve('src/pages/advanced-settings/advanced-settings.tsx'),
+      info: path.resolve('src/pages/info/info.tsx'),
+      settings: path.resolve('src/pages/settings/settings.tsx'),
+      tutorials: path.resolve('src/pages/tutorials/tutorials.tsx'),
+      welcome: path.resolve('src/pages/welcome/welcome.tsx'),
         //popup: path.resolve('src/extension/popup.tsx'),
         //options: path.resolve('src/options/options.tsx'),
         // background: path.resolve('src/background/background.ts'),
@@ -14,7 +19,7 @@ module.exports = {
     },
     module: {
         rules: [
-            {
+            { 
                 use: 'ts-loader',
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
