@@ -10,9 +10,9 @@
     },
     "content_scripts": [
         {
-            "js": ["tutorials/index.js"
+            "js": ["contentScript/contentScript.js"
             ],
-            "css": ["tutorials/jup.css"],
+            "css": ["contentScript/contentScript.css"],
             "matches": ["*://*/*"]
         },
         {

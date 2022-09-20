@@ -451,6 +451,8 @@ const exampleSteps = {
         "<div class=\"popup-tutorial-template popup-1\" id=\"48093343-34243242\">\n <h1 id = \"site-title\">Jupiter</h1>\n <p id = \"paragraph123456\">Jupiter searches all <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/exchange\" target=\"_blank\">exchanges</a> on <a class = \"vocab\" href=\"https://www.youtube.com/watch?v=1jzROE6EhxM\" target=\"_blank\">Solana</a> to find you the best prices for <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/token-swap\" target=\"_blank\">swapping</a> crypto.</p>\n <button id=\"button-1\">Continue</button>\n </div>"
         ,
         "<div class=\"popup-tutorial-template popup-1\" id=\"48093343-34243242\">\n <h1 id = \"site-title\">Jupiter</h1>\n <p id = \"paragraph123456\">Jupiter searches all <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/exchange\" target=\"_blank\">exchanges</a> on <a class = \"vocab\" href=\"https://www.youtube.com/watch?v=1jzROE6EhxM\" target=\"_blank\">Solana</a> to find you the best prices for <a class = \"vocab\" href=\"https://coinmarketcap.com/alexandria/glossary/token-swap\" target=\"_blank\">swapping</a> crypto.</p>\n <button id=\"button-1\">Continue1</button>\n </div>"
+        ,
+        
     ]
 }
 
